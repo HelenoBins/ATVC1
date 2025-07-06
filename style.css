@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Century Gothic', sans-serif;
   background-color: #d9d9d9; /* fundo cinza claro */
   color: #000000; /* texto preto */
   line-height: 1.6;
@@ -76,7 +76,7 @@ section > p {
 
 /* Títulos */
 h1 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Century Gothic', sans-serif;
   color: #333333; /* títulos em cinza escuro */
   margin-bottom: 25px;
   text-align: center;
@@ -155,7 +155,7 @@ form textarea {
   border-radius: 4px;
   font-size: 15px;
   resize: vertical;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Century Gothic', sans-serif;
   background-color: #fff;
   color: #000000; /* texto preto */
 }
@@ -179,6 +179,7 @@ form input[type="submit"] {
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.25s ease;
+  font-family: 'Century Gothic', sans-serif;
 }
 
 form input[type="submit"]:hover {
