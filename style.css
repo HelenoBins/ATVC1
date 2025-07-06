@@ -8,7 +8,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #d9d9d9; /* fundo cinza claro */
-  color: #333333; /* texto escuro para contraste */
+  color: #000000; /* texto preto */
   line-height: 1.6;
   padding-top: 60px; /* espaço para menu fixo */
 }
@@ -18,7 +18,7 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #555555; /* cinza médio */
+  background-color: #555555;
   box-shadow: 0 2px 5px rgba(0,0,0,0.3);
   z-index: 1000;
 }
@@ -53,11 +53,11 @@ nav ul li a:hover {
 section {
   max-width: 900px;
   margin: 40px auto;
-  background: #ffffff; /* fundo branco para seções */
+  background: #ffffff;
   padding: 25px 30px;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  color: #222222;
+  color: #000000; /* texto preto */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,18 +71,19 @@ section > p {
   width: 100%;
   max-width: 700px;
   margin: 0 auto 20px auto;
+  color: #000000; /* texto preto */
 }
 
 /* Títulos */
 h1 {
   font-family: 'Roboto', sans-serif;
-  color: #111111;
+  color: #333333; /* títulos em cinza escuro */
   margin-bottom: 25px;
   text-align: center;
   font-weight: 700;
 }
 
-/* Formação - listas estilizadas */
+/* Formação - listas */
 section#formacao ul {
   padding-left: 20px;
   margin-bottom: 20px;
@@ -91,7 +92,7 @@ section#formacao ul {
 section#formacao ul li {
   margin-bottom: 8px;
   font-size: 16px;
-  color: #444444;
+  color: #000000; /* listas pretas */
 }
 
 /* Portfólio */
@@ -114,7 +115,7 @@ section#portfolio .cards {
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: default;
-  color: #222222;
+  color: #000000; /* texto preto */
 }
 
 .card:hover {
@@ -134,12 +135,13 @@ form {
   max-width: 700px;
   margin: 0 auto;
   text-align: left;
+  color: #000000; /* texto preto */
 }
 
 form label {
   font-weight: 600;
   font-size: 16px;
-  color: #222222;
+  color: #000000; /* texto preto */
 }
 
 form input[type="text"],
@@ -155,12 +157,12 @@ form textarea {
   resize: vertical;
   font-family: 'Roboto', sans-serif;
   background-color: #fff;
-  color: #222;
+  color: #000000; /* texto preto */
 }
 
 form input::placeholder,
 form textarea::placeholder {
-  color: #888;
+  color: #555;
 }
 
 form textarea {
