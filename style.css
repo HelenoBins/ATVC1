@@ -1,67 +1,208 @@
-/* Estilo global */
+/* Reset básico e estilo global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #d9d9d9; /* fundo cinza claro */
+  color: #333333; /* texto escuro para contraste */
+  line-height: 1.6;
+  padding-top: 60px; /* espaço para menu fixo */
 }
 
 /* Menu de navegação */
 nav {
-    background-color: #333;
-    position: fixed;
-    top: 0;
-    width: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #555555; /* cinza médio */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  z-index: 1000;
 }
 
 nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 10px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 15px 0;
 }
 
 nav ul li {
-    margin: 0 15px;
+  margin: 0 20px;
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 8px 16px;
+  color: #f0f0f0;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
-    background-color: #575757;
-    border-radius: 4px;
+  background-color: #333333;
+  color: #fff;
 }
 
 /* Seções */
 section {
-    padding: 80px 20px 20px 20px; /* espaço para o menu fixo */
+  max-width: 900px;
+  margin: 40px auto;
+  background: #ffffff; /* fundo branco para seções */
+  padding: 25px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  color: #222222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
 }
 
+/* Container interno para conteúdo */
+section > div, 
+section > ul, 
+section > p {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto 20px auto;
+}
+
+/* Títulos */
 h1 {
-    color: #333;
+  font-family: 'Roboto', sans-serif;
+  color: #111111;
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: 700;
 }
 
-form input, form textarea {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+/* Formação - listas estilizadas */
+section#formacao ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+section#formacao ul li {
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #444444;
+}
+
+/* Portfólio */
+section#portfolio .cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  width: 260px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+  color: #222222;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+/* Formulário */
+form {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+form label {
+  font-weight: 600;
+  font-size: 16px;
+  color: #222222;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  margin-bottom: 18px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  font-size: 15px;
+  resize: vertical;
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff;
+  color: #222;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #888;
+}
+
+form textarea {
+  min-height: 100px;
 }
 
 form input[type="submit"] {
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
+  background-color: #555555;
+  border: none;
+  padding: 12px 25px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
 }
 
 form input[type="submit"]:hover {
-    background-color: #575757;
+  background-color: #333333;
+}
+
+/* Responsividade */
+@media (max-width: 700px) {
+  section {
+    padding: 20px 15px;
+  }
+
+  section > div, 
+  section > ul, 
+  section > p, 
+  form {
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
 }
